@@ -123,7 +123,7 @@ spec:
           - key: nginx.conf
             path: nginx.conf
       containers:
-      - name: catalogue
+      - name: frontend
         image: pavandivi/frontend:1.0.0
         volumeMounts:
         - name: nginx-conf
@@ -134,7 +134,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalogue
+  name: frontend
   namespace: roboshop
 spec:
   type: LoadBalancer
