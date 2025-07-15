@@ -120,15 +120,15 @@ spec:
         configMap:
           name: nginx
           items:
-          - key: nginx-conf
-            path: nginx-conf
+          - key: nginx.conf
+            path: nginx.conf
       containers:
       - name: catalogue
         image: pavandivi/frontend:1.0.0
         volumeMounts:
         - name: nginx-conf
-          mountPath: /etc/nginx/nginx-conf
-          subPath: nginx-conf
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
           readonly: true
 ---
 apiVersion: v1
