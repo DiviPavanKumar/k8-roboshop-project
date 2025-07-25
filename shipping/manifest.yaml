@@ -49,6 +49,10 @@ kind: ConfigMap
 metadata:
   name: shipping
   namespace: roboshop
+  labels:
+    app: shipping
+    tier: app
+    project: roboshop
 data:
   CART_ENDPOINT: "cart:8080"
   DB_HOST: mysql
