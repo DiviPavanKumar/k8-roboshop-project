@@ -144,7 +144,7 @@ spec:
             path: nginx.conf
       containers:
       - name: frontend
-        image: pavandivi/frontend:1.0.0
+        image: pavandivi/frontend:v1
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
