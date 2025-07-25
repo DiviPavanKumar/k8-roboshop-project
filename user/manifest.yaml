@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: pavandivi/user:1.0.0
+        image: pavandivi/user:v1
         envFrom:
         - configMapRef:
             name: user

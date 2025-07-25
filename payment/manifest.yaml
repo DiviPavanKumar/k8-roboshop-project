@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: pavandivi/payment:1.0.0
+        image: pavandivi/payment:v1
         envFrom:
         - configMapRef:
             name: payment

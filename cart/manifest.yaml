@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: pavandivi/cart:1.0.0
+        image: pavandivi/cart:v1
         envFrom:
         - configMapRef:
             name: cart
