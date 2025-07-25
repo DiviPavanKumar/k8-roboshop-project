@@ -95,13 +95,6 @@ spec:
         tier: app
         project: roboshop
     spec:
-      volumes:
-      - name: nginx-conf
-        configMap:
-          name: nginx-conf
-          items:
-          - key: nginx.conf
-            path: nginx.conf
       containers:
       - name: frontend
         image: pavandivi/frontend:v1
@@ -110,6 +103,13 @@ spec:
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
           readOnly: true
+    volumes:
+      - name: nginx-conf
+        configMap:
+          name: nginx-conf
+          items:
+            - key: nginx.conf
+              path: nginx.conf
 ---
 apiVersion: v1
 kind: Service
